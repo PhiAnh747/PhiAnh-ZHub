@@ -36,7 +36,7 @@ TimeLabel.Text = "Time Elapsed: 0s"
 
 -- ⏳ Cập nhật UI
 spawn(function()
-    while wait(1) do
+    while wait(0.75) do
         ChestLabel.Text = "Chests Collected: " .. ChestCount
         TimeLabel.Text = "Time Elapsed: " .. os.time() - StartTime .. "s"
     end
@@ -60,7 +60,7 @@ end
 function TeleportToChest(chest)
     if chest and LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
         LocalPlayer.Character.HumanoidRootPart.CFrame = chest.CFrame
-        wait(0.5) -- Chờ một chút để đảm bảo nhặt rương
+        wait(0.75) -- Chờ một chút để đảm bảo nhặt rương
     end
 end
 
